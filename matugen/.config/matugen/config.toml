@@ -30,6 +30,18 @@ output_path = '~/.config/doom/matugen-theme.el'
 input_path = '~/.config/matugen/templates/zathura/zathura-colors'
 output_path = '~/.config/zathura/zathurarc'
 
+[templates.system24]
+input_path = '~/.config/matugen/templates/vesktop/system24.css'
+output_path = '~/.config/vesktop/themes/system24.theme.css'
+
+[templates.zen-chrome]
+input_path = '~/.config/matugen/templates/zen/userChrome.css.tpl'
+output_path = '~/.config/zen/default/chrome/userChrome.css'
+
+[templates.zen-content]
+input_path = '~/.config/matugen/templates/zen/userContent.css.tpl'
+output_path = '~/.config/zen/default/chrome/userContent.css'
+
 [templates.gtk3]
 input_path = '~/.config/matugen/templates/gtk-3.0/gtk.css'
 output_path = '~/.config/gtk-3.0/gtk.css'
