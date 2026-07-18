@@ -1,0 +1,22 @@
+{
+  "background": "#E5E9F0",
+  "foreground": "#3B4252",
+  "cursor": "#485163",
+  "color0": "#E5E9F0",
+  "color1": "#99324B",
+  "color2": "#4F894C",
+  "color3": "#9A7500",
+  "color4": "#3B6EA8",
+  "color5": "#97365B",
+  "color6": "#398EAC",
+  "color7": "#3B4252",
+  "color8": "#3B4252",
+  "color9": "#99324B",
+  "color10": "#4F894C",
+  "color11": "#9A7500",
+  "color12": "#3B6EA8",
+  "color13": "#97365B",
+  "color14": "#398EAC",
+  "color15": "#485163",
+  "name": "nord-light"
+}

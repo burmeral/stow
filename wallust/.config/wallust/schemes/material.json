@@ -1,0 +1,22 @@
+{
+  "background": "#263238",
+  "foreground": "#EEFFFF",
+  "cursor": "#9BA3A7",
+  "color0": "#263238",
+  "color1": "#FF5370",
+  "color2": "#C3E88D",
+  "color3": "#FFCB6B",
+  "color4": "#82AAFF",
+  "color5": "#C792EA",
+  "color6": "#89DDFF",
+  "color7": "#EEFFFF",
+  "color8": "#EEFFFF",
+  "color9": "#FF5370",
+  "color10": "#C3E88D",
+  "color11": "#FFCB6B",
+  "color12": "#82AAFF",
+  "color13": "#C792EA",
+  "color14": "#89DDFF",
+  "color15": "#9BA3A7",
+  "name": "material"
+}

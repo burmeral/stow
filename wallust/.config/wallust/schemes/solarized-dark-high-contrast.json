@@ -1,0 +1,22 @@
+{
+  "background": "#002732",
+  "foreground": "#8D9FA1",
+  "cursor": "#626C6C",
+  "color0": "#002732",
+  "color1": "#EC423A",
+  "color2": "#93A61A",
+  "color3": "#C49619",
+  "color4": "#3C98E0",
+  "color5": "#E2468F",
+  "color6": "#3CAFA5",
+  "color7": "#8D9FA1",
+  "color8": "#8D9FA1",
+  "color9": "#EC423A",
+  "color10": "#93A61A",
+  "color11": "#C49619",
+  "color12": "#3C98E0",
+  "color13": "#E2468F",
+  "color14": "#3CAFA5",
+  "color15": "#626C6C",
+  "name": "solarized-dark-high-contrast"
+}

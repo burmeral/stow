@@ -1,0 +1,22 @@
+{
+  "background": "#3F3F3F",
+  "foreground": "#DCDCDC",
+  "cursor": "#FFFFEF",
+  "color0": "#3F3F3F",
+  "color1": "#CC9393",
+  "color2": "#7F9F7F",
+  "color3": "#F0DFAF",
+  "color4": "#8CD0D3",
+  "color5": "#DC8CC3",
+  "color6": "#93E0E3",
+  "color7": "#DCDCDC",
+  "color8": "#DCDCDC",
+  "color9": "#CC9393",
+  "color10": "#7F9F7F",
+  "color11": "#F0DFAF",
+  "color12": "#8CD0D3",
+  "color13": "#DC8CC3",
+  "color14": "#93E0E3",
+  "color15": "#FFFFEF",
+  "name": "zenburn"
+}

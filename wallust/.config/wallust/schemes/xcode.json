@@ -1,0 +1,22 @@
+{
+  "background": "#292A30",
+  "foreground": "#FFFFFF",
+  "cursor": "#FFFFFF",
+  "color0": "#292A30",
+  "color1": "#FC6A5D",
+  "color2": "#67B7A4",
+  "color3": "#D0BF68",
+  "color4": "#5DD8FF",
+  "color5": "#D0A8FF",
+  "color6": "#8ABEB7",
+  "color7": "#FFFFFF",
+  "color8": "#6C7986",
+  "color9": "#FC6A5D",
+  "color10": "#67B7A4",
+  "color11": "#D0BF68",
+  "color12": "#5DD8FF",
+  "color13": "#D0A8FF",
+  "color14": "#8ABEB7",
+  "color15": "#FFFFFF",
+  "name": "xcode"
+}

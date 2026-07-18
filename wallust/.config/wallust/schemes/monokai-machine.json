@@ -1,0 +1,22 @@
+{
+  "background": "#273136",
+  "foreground": "#F2FFFC",
+  "cursor": "#B4C1C0",
+  "color0": "#273136",
+  "color1": "#FF6D7E",
+  "color2": "#A2E57B",
+  "color3": "#FFED72",
+  "color4": "#F2FFFC",
+  "color5": "#BAA0F8",
+  "color6": "#7CD5F1",
+  "color7": "#F2FFFC",
+  "color8": "#F2FFFC",
+  "color9": "#FF6D7E",
+  "color10": "#A2E57B",
+  "color11": "#FFED72",
+  "color12": "#F2FFFC",
+  "color13": "#BAA0F8",
+  "color14": "#7CD5F1",
+  "color15": "#B4C1C0",
+  "name": "monokai-machine"
+}

@@ -1,0 +1,22 @@
+{
+  "background": "#172030",
+  "foreground": "#FAFFF6",
+  "cursor": "#F0F4FC",
+  "color0": "#172030",
+  "color1": "#C6797E",
+  "color2": "#A3B09A",
+  "color3": "#F7E3AF",
+  "color4": "#6E94B9",
+  "color5": "#B18BB1",
+  "color6": "#88C0D0",
+  "color7": "#FAFFF6",
+  "color8": "#FAFFF6",
+  "color9": "#C6797E",
+  "color10": "#A3B09A",
+  "color11": "#F7E3AF",
+  "color12": "#6E94B9",
+  "color13": "#B18BB1",
+  "color14": "#88C0D0",
+  "color15": "#F0F4FC",
+  "name": "rouge"
+}

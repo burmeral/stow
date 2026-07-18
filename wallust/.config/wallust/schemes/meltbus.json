@@ -1,0 +1,22 @@
+{
+  "background": "#000000",
+  "foreground": "#DDDDDD",
+  "cursor": "#EFEFEF",
+  "color0": "#000000",
+  "color1": "#F8B0B0",
+  "color2": "#448844",
+  "color3": "#CDAD00",
+  "color4": "#87AFFF",
+  "color5": "#DB7093",
+  "color6": "#46D9FF",
+  "color7": "#DDDDDD",
+  "color8": "#DDDDDD",
+  "color9": "#F8B0B0",
+  "color10": "#448844",
+  "color11": "#CDAD00",
+  "color12": "#87AFFF",
+  "color13": "#DB7093",
+  "color14": "#46D9FF",
+  "color15": "#EFEFEF",
+  "name": "meltbus"
+}

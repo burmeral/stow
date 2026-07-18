@@ -1,0 +1,22 @@
+{
+  "background": "#222222",
+  "foreground": "#F7F1FF",
+  "cursor": "#B6B2BC",
+  "color0": "#222222",
+  "color1": "#FC618D",
+  "color2": "#7BD88F",
+  "color3": "#FCE566",
+  "color4": "#F7F1FF",
+  "color5": "#948AE3",
+  "color6": "#5AD4E6",
+  "color7": "#F7F1FF",
+  "color8": "#F7F1FF",
+  "color9": "#FC618D",
+  "color10": "#7BD88F",
+  "color11": "#FCE566",
+  "color12": "#F7F1FF",
+  "color13": "#948AE3",
+  "color14": "#5AD4E6",
+  "color15": "#B6B2BC",
+  "name": "monokai-spectrum"
+}

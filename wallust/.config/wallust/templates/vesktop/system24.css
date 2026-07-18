@@ -1,0 +1,55 @@
+/**
+ * @name system24
+ * @description Wallust generated system24
+ * @author Wallust
+ */
+
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+
+    --animations: on;
+    --unrounding: on;
+    --ascii-titles: on;
+}
+
+:root {
+    --colors: on;
+
+
+    /* text colors */
+    --text-0: {{ foreground }};
+    --text-1: {{ foreground }};
+    --text-2: {{ foreground }};
+    --text-3: {{ foreground }};
+    --text-4: {{ foreground }};
+    --text-5: {{ foreground }};
+
+
+    /* backgrounds */
+    --bg-1: {{ color0 }};
+    --bg-2: {{ background }};
+    --bg-3: {{ background }};
+    --bg-4: {{ background }};
+
+
+    /* accents */
+    --accent-1: {{ color4 }};
+    --accent-2: {{ color5 }};
+    --accent-3: {{ color1 }};
+    --accent-4: {{ foreground }};
+    --accent-5: {{ color8 }};
+
+
+    /* status */
+    --online: {{ color2 }};
+    --dnd: {{ color1 }};
+    --idle: {{ color3 }};
+    --streaming: {{ color5 }};
+}

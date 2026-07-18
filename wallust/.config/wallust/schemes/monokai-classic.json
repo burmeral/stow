@@ -1,0 +1,22 @@
+{
+  "background": "#272822",
+  "foreground": "#F8F8F2",
+  "cursor": "#FFFFFF",
+  "color0": "#272822",
+  "color1": "#E74C3C",
+  "color2": "#A6E22E",
+  "color3": "#E6DB74",
+  "color4": "#268BD2",
+  "color5": "#F92660",
+  "color6": "#66D9EF",
+  "color7": "#F8F8F2",
+  "color8": "#525254",
+  "color9": "#E74C3C",
+  "color10": "#A6E22E",
+  "color11": "#E6DB74",
+  "color12": "#268BD2",
+  "color13": "#F92660",
+  "color14": "#66D9EF",
+  "color15": "#FFFFFF",
+  "name": "monokai-classic"
+}

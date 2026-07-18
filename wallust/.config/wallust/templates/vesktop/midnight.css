@@ -1,0 +1,59 @@
+/**
+ * @name midnight
+ * @description Wallust generated midnight-discord
+ * @author Wallust
+ */
+
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+:root {
+	--font: 'gg sans';
+	--corner-text: 'Wallust';
+
+	/* status colors */
+	--online-indicator: {{ color2 }};
+	--dnd-indicator: {{ color1 }};
+	--idle-indicator: {{ color3 }};
+	--streaming-indicator: {{ color5 }};
+
+
+	/* accent colors */
+	--accent-1: {{ color4 }};
+	--accent-2: {{ color0 }};
+	--accent-3: {{ color0 }};
+	--accent-4: {{ color15 }};
+	--accent-5: {{ color8 }};
+
+	--mention: {{ color0 }};
+	--mention-hover: {{ color0 }};
+
+
+	/* text colors */
+	--text-0: {{ color15 }};
+	--text-1: {{ color7 }};
+	--text-2: {{ color7 }};
+	--text-3: {{ color7 }};
+	--text-4: {{ foreground }};
+	--text-5: {{ foreground }};
+
+
+	/* backgrounds */
+	--bg-1: {{ color0 }};
+	--bg-2: {{ background }};
+	--bg-3: {{ background }};
+	--bg-4: {{ background }};
+
+	--hover: {{ color0 }};
+	--active: {{ color0 }};
+	--message-hover: {{ color0 }};
+
+
+	--spacing: 12px;
+
+	--roundness-xl: 22px;
+	--roundness-l: 20px;
+	--roundness-m: 16px;
+	--roundness-s: 12px;
+	--roundness-xs: 10px;
+	--roundness-xxs: 8px;
+}

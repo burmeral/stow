@@ -1,0 +1,82 @@
+//   _____ _____ _____ _____ _____ _____ _____ _____ _____
+//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
+//  |   __|     |__   | | | |   __|   __| | | |   --|     |
+//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|  ASCII-ART
+//
+//  by Bina
+
+
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "kitty-direct",
+        "source": "/home/ram/Assets/Fetch/current.png",
+        "width": 25,
+        "height": 10,
+        "padding": {
+            "top": 1,
+            "left": 2,
+        }
+    },
+
+    "display": {
+        "separator": "    "
+    },
+    "modules": [
+	"break",
+	"break",
+	{
+            "type": "title",
+            "color": {
+                "user": "36",  // = color2
+                "at": "37",
+                "host": "36"
+            }
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "distro         ",
+            "keyColor": "33",
+            "format": "{id} {version-id}",
+        },
+        {
+            "type": "command",
+            "key": "kernel         ",
+            "keyColor": "33",
+            "text": "uname -sr | tr '[:upper:]' '[:lower:]'"
+        },
+        {
+            "type": "packages",
+            "format": "{nix-system} (system) {nix-user} (user)",
+            "key": "packages       ",
+            "keyColor": "33",
+        },
+        {
+            "type": "shell",
+            "key": "shell          ",
+            "keyColor": "33",
+        },
+        {
+            "type": "terminal",
+            "key": "terminal       ",
+            "keyColor": "33",
+        },
+        {
+            "type": "command",
+            "key": "wm             ",
+            "keyColor": "33",
+            "text": "printf '%s (%s)\n' \"$XDG_CURRENT_DESKTOP\" \"$(echo \"$XDG_SESSION_TYPE\" | tr '[:lower:]' '[:lower:]')\""
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "square",
+            "block": {
+                "width": 1
+            },
+        },
+        "break",
+        "break",
+    ]
+}

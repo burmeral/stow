@@ -1,0 +1,22 @@
+{
+  "background": "#251D2F",
+  "foreground": "#C4B8D3",
+  "cursor": "#D3CADE",
+  "color0": "#251D2F",
+  "color1": "#FF6C6B",
+  "color2": "#98BE65",
+  "color3": "#ECBE7B",
+  "color4": "#51AFEF",
+  "color5": "#7A619A",
+  "color6": "#7DCFFF",
+  "color7": "#C4B8D3",
+  "color8": "#C4B8D3",
+  "color9": "#FF6C6B",
+  "color10": "#98BE65",
+  "color11": "#ECBE7B",
+  "color12": "#51AFEF",
+  "color13": "#7A619A",
+  "color14": "#7DCFFF",
+  "color15": "#D3CADE",
+  "name": "feather-dark"
+}

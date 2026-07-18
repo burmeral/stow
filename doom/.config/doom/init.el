@@ -181,7 +181,7 @@
        ;;web               ; the tubes
        ;;yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
-       (org +pretty +roam2) ; Wow, fancypants
+       (org +pretty +roam) ; Wow, fancypants
 
        :email
        ;;(mu4e +org +gmail)

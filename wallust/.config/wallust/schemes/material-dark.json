@@ -1,0 +1,22 @@
+{
+  "background": "#212121",
+  "foreground": "#EEFFFF",
+  "cursor": "#A8A8A8",
+  "color0": "#212121",
+  "color1": "#F57373",
+  "color2": "#C3E88D",
+  "color3": "#FFCB6B",
+  "color4": "#82AAFF",
+  "color5": "#C792EA",
+  "color6": "#89DDFF",
+  "color7": "#EEFFFF",
+  "color8": "#EEFFFF",
+  "color9": "#F57373",
+  "color10": "#C3E88D",
+  "color11": "#FFCB6B",
+  "color12": "#82AAFF",
+  "color13": "#C792EA",
+  "color14": "#89DDFF",
+  "color15": "#A8A8A8",
+  "name": "material-dark"
+}

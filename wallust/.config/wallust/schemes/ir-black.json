@@ -1,0 +1,22 @@
+{
+  "background": "#000000",
+  "foreground": "#F6F3E8",
+  "cursor": "#DFDFDF",
+  "color0": "#000000",
+  "color1": "#FF6C60",
+  "color2": "#A8FF60",
+  "color3": "#FFFFB6",
+  "color4": "#96CBFE",
+  "color5": "#FF73FD",
+  "color6": "#C6C5FE",
+  "color7": "#F6F3E8",
+  "color8": "#F6F3E8",
+  "color9": "#FF6C60",
+  "color10": "#A8FF60",
+  "color11": "#FFFFB6",
+  "color12": "#96CBFE",
+  "color13": "#FF73FD",
+  "color14": "#C6C5FE",
+  "color15": "#DFDFDF",
+  "name": "ir-black"
+}
