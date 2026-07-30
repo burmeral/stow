@@ -15,7 +15,7 @@ backend = "fastresize"
 
 # What color space to use to produce and select the most prominent colors:
 # lab - labmixed - lch - lchmixed - salience
-color_space = "salience"
+color_space = "labmixed"
 
 # Use the most prominent colors in a way that makes sense, a scheme color palette:
 # dark - dark16 - darkcomp - darkcomp16
@@ -25,7 +25,7 @@ color_space = "salience"
 # softlight - softlight16 - softlightcomp - softlightcomp16
 # saliencedark - saliencedarkbalanced - saliencedarkdistributed - saliencedarklow (each has the 16 variations)
 # salienceligh - saliencelightbalanced - saliencelightdistributed - saliencelightlow (each has the 16 variations)
-palette = "dark16"
+palette = "softlight"
 
 # Ensures a "readable contrast" (OPTIONAL, disabled by default)
 # Should only be enabled when you notice an unreadable contrast frequently happening
@@ -46,10 +46,6 @@ palette = "dark16"
 [templates.kitty]
 template = "kitty/kitty.conf"
 target = "~/.config/kitty/colors.conf"
-
-[templates.hypr]
-template = "hyprland/colors.conf"
-target = "~/.config/hypr/UserConfigs/colors.conf"
 
 [templates.gtk3]
 template = "gtk-3.0/gtk.css"
@@ -74,6 +70,10 @@ target = "~/.config/vesktop/themes/midnight.theme.css"
 [templates.superfile]
 template = "superfile/theme.toml"
 target = "~/.config/superfile/themes/generated.toml"
+
+[templates.nvim]
+template = "nvim/colors.lua"
+target = "~/.config/nvim/lua/generated_colors.lua"
 
 [templates.bookokrat]
 template = "bookokrat/bookokrat.yaml"

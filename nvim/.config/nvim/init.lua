@@ -1,3 +1,11 @@
-vim.api.nvim_set_hl(0, "Normal",       { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat",  { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC",     { bg = "none" })
+require("vim._core.ui2").enable({})
+
+require("options")
+require("keymaps")
+require("commands")
+require("pack")
+require("treesitter")
+require("completions")
+require("theme")
+
+require("generated_colors")
