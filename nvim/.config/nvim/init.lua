@@ -1,11 +1,8 @@
+-- ~/.config/nvim/init.lua
+
 require("vim._core.ui2").enable({})
 
 require("options")
-require("keymaps")
-require("commands")
-require("pack")
-require("treesitter")
-require("completions")
-require("theme")
-
-require("generated_colors")
+require("binds")
+require("packages")
+require("colors")

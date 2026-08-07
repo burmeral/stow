@@ -1,25 +1,87 @@
 -- ~/.config/hypr/modules/rules.lua
 
---------------------------------
----- WINDOWS AND WORKSPACES ----
---------------------------------
+-- Window rules
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
--- Example window rules that are useful
+-- Host-specific logic
 
-local suppressMaximizeRule = hl.window_rule({
-    -- Ignore maximize requests from all apps. You'll probably like this.
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
+local otterSize  = { 410, 220 }
+local kittySize  = { 1384, 703 }
 
-    suppress_event = "maximize",
+if Hostname == "koch" then
+
+	otterSize    = { 420, 220 }
+    kittySize    = { 1384, 703 }
+
+elseif Hostname == "cross" then
+
+else
+end
+
+
+-- Universal window rules (shared among all hosts)
+
+hl.window_rule({ 
+    name         = "zen-border-rounding",
+    match        = { class = "zen-beta" }, 
+    rounding     = 20,
 })
--- suppressMaximizeRule:set_enabled(false)
+
+hl.window_rule({ 
+    name         = "kitty-scratch",
+    match        = { class = "kitty", class = "scratchpad" }, 
+	size         = kittySize, 
+    float        = true,
+    center       = true,
+    no_anim      = true,
+    workspace    = "special:scratchpad",
+})
 
 hl.window_rule({
-    -- Fix some dragging issues with XWayland
+	name         = "otter-launcher",
+	match        = { class = "otter" },
+	float        = true,
+    pin          = true,
+    stay_focused = true,
+	-- animation    = "popin 80%",
+    no_anim      = true,
+	size         = otterSize,
+	opaque       = true,
+})
+
+hl.window_rule({
+    name         = "audacious",
+    match        = { class = "Audacious" },
+    float        = true,
+    no_anim      = true,
+    opaque       = true, 
+})
+
+hl.window_rule({ 
+    name         = "pip",
+    match        = { class = "zen-beta", title = "Picture-in-Picture" }, 
+    float        = true,
+})
+
+-- Default window rules
+
+hl.window_rule({
+    name  = "move-hyprland-run",
+    match = { class = "hyprland-run" },
+
+    move  = "20 monitor_h-120",
+    float = true,
+})
+
+local suppressMaximizeRule = hl.window_rule({
+    name  = "suppress-maximize-events",
+    match = { class = ".*" },
+    suppress_event = "maximize",
+})
+
+hl.window_rule({
     name  = "fix-xwayland-drags",
     match = {
         class      = "^$",
@@ -33,7 +95,8 @@ hl.window_rule({
     no_focus = true,
 })
 
--- Layer rules also return a handle.
+-- Workspace rules + Overlays
+
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
 --     match = { namespace = "^my-overlay$" },
@@ -41,11 +104,7 @@ hl.window_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
--- Hyprland-run windowrule
-hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
+-- Behavior
 
-    move  = "20 monitor_h-120",
-    float = true,
-})
+hl.config({ general = { resize_on_border = true, allow_tearing = false } })
+

@@ -1,14 +1,12 @@
-vim.g.netrw_banner = 0
-
-vim.opt.guicursor = ""
-
--- Scrolloff
-local scrolloff = math.floor(vim.o.lines / 2) - 3
-vim.opt.scrolloff = scrolloff
+-- ~/.config/nvim/lua/options.lua
 
 -- Line numbers
 vim.opt.guicursor = ""
--- vim.opt.scrolloff = 8 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+local scrolloff = math.floor(vim.o.lines / 2) - 3
+vim.opt.scrolloff = scrolloff
 
 -- Wrapping
 vim.opt.wrap = false
@@ -45,6 +43,15 @@ vim.opt.colorcolumn = "0"
 vim.opt.signcolumn = "yes"
 vim.o.cmdheight = 0
 vim.opt.termguicolors = true
+vim.opt.shell = vim.fn.exepath("zsh")
+
+-- Appearance
+vim.g.netrw_banner = 0
+vim.api.nvim_set_hl(0, "Normal",       { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat",  { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC",     { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLine",   { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
 
 -- Highlight yank
 vim.api.nvim_create_autocmd("TextYankPost", {

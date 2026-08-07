@@ -6,7 +6,7 @@
 -- Default modifiers
 local mainMod = "SUPER + "
 local subMod = "ALT + "
-local tertiaryMod = "CTRL +"
+local tertiaryMod = "CTRL + "
 local keyboardString = "1234567890"
 local keybindIndex = 1
 local directions = { h = "left", j = "down", k = "up", l = "right", }
@@ -27,13 +27,42 @@ local globalAppBinds = {
     { key = { "q" }, dispatch = hl.dsp.window.close() },
 
     -- Open windows
-    { key = { "SPACE" }, command = "fuzzel" },
     { key = { "RETURN" }, command = "kitty" },
-    { mod = mainMod, key = { "b" }, command = "zen-beta" },
+    { key = { "b" }, command = "zen-beta" },
+
+    -- Otter
+	{
+		key = { "SPACE" },
+		dispatch = function()
+			if hl.get_windows({ class = "otter" })[1] ~= nil then
+                local close = hl.dsp.window.close()
+                hl.dispatch(close)
+			else
+				hl.exec_cmd("kitty --class otter --title otter-launcher -e sh -c 'sleep 0.05 && otter-launcher'")
+            end
+		end,
+	},
+
+    -- Special workspaces
+    
+    { key = { "n" }, dispatch = hl.dsp.workspace.toggle_special("nil") },
+    { key = { "SHIFT + n" }, dispatch = hl.dsp.window.move({ workspace = "special:nil" }) },
+
+    -- Scratchpad
+	{
+		key = { "s" },
+		dispatch = function()
+			if hl.get_windows({ class = "scratchpad" })[1] ~= nil then
+				hl.dispatch(hl.dsp.workspace.toggle_special("scratchpad"))
+			else
+				hl.exec_cmd("kitty --class scratchpad")
+			end
+		end,
+	},
+
 
     -- Handle windows
-    { key = { "u" }, dispatch = hl.dsp.window.fullscreen({ action = "toggle" }) },
-    { key = { "i" }, dispatch = hl.dsp.window.pseudo({ action = "toggle" }) },
+    { key = { "i" }, dispatch = hl.dsp.window.fullscreen({ action = "toggle" }) },
     { key = { "o" }, dispatch = hl.dsp.window.float({ action = "toggle" }) },
     { key = { "p" }, dispatch = hl.dsp.window.pin({ action = "toggle" }) },
     { key = { "g" }, dispatch = hl.dsp.layout("togglesplit") },
@@ -42,19 +71,29 @@ local globalAppBinds = {
 	{ key = { "mouse:272" }, dispatch = hl.dsp.window.drag(), opts = { mouse = true } },
 	{ key = { "mouse:273" }, dispatch = hl.dsp.window.resize(), opts = { mouse = true } },
 
+    -- Move between workspaces
+    { mod = subMod, key = { "h" }, dispatch = hl.dsp.focus({ workspace = "-1" }) },
+    { mod = subMod, key = { "l" }, dispatch = hl.dsp.focus({ workspace = "+1" }) },
+    { mod = subMod, key = { "SHIFT + h" }, dispatch = hl.dsp.window.move({ workspace = "-1" }) },
+    { mod = subMod, key = { "SHIFT + l" }, dispatch = hl.dsp.window.move({ workspace = "+1" }) },
+
     -- Infinite desktop nav
 
-    -- Move between workspaces
-    { mod = tertiaryMod, key = { "h" }, dispatch = hl.dsp.focus({ workspace = "-1" }) },
-    { mod = tertiaryMod, key = { "l" }, dispatch = hl.dsp.focus({ workspace = "+1" }) },
-    { mod = tertiaryMod, key = { "SHIFT + h" }, dispatch = hl.dsp.window.move({ workspace = "-1" }) },
-    { mod = tertiaryMod, key = { "SHIFT + l" }, dispatch = hl.dsp.window.move({ workspace = "+1" }) },
+    -- Toggle between floating and tiled state
+    { key = { "t" }, command = "floating_tile_toggle.py" },
 
     -- Window travel
-    { mod = subMod, key = { "h" }, command = "navigate_windows.py left" },
-    { mod = subMod, key = { "j" }, command = "navigate_windows.py down" },
-    { mod = subMod, key = { "k" }, command = "navigate_windows.py up" },
-    { mod = subMod, key = { "l" }, command = "navigate_windows.py right" },
+    { key = { "h" }, command = "navigate_windows.py left" },
+    { key = { "j" }, command = "navigate_windows.py down" },
+    { key = { "k" }, command = "navigate_windows.py up" },
+    { key = { "l" }, command = "navigate_windows.py right" },
+    { key = { "g" }, command = "navigate_windows.py center" },
+
+    -- Window travel + auto homing
+    -- { key = { "h" }, command = "navigate_windows.py left  && navigate_windows.py center" },
+    -- { key = { "j" }, command = "navigate_windows.py down && navigate_windows.py center" },
+    -- { key = { "k" }, command = "navigate_windows.py up && navigate_windows.py center" },
+    -- { key = { "l" }, command = "navigate_windows.py right && navigate_windows.py center" },
 
     -- Move tiled windows
     { mod = subMod, key = { "SUPER + h" }, command = "move_window_tiled.py left" },
@@ -68,10 +107,6 @@ local globalAppBinds = {
     { mod = subMod, key = { "SUPER + k" }, command = "move_window.py up", opts = { repeating = true } },
     { mod = subMod, key = { "SUPER + l" }, command = "move_window.py right", opts = { repeating = true } },
 
-
-    -- Special workspaces
-    { key = { "s" }, dispatch = hl.dsp.workspace.toggle_special("magic") },
-    { key = { "SHIFT + s" }, dispatch = hl.dsp.window.move({ workspace = "special:magic" }) },
 
     -- Laptop binds 
     { mod = "", key = { "XF86AudioRaiseVolume" }, command = "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+", opts = { locked = true, repeating = true } },
@@ -95,17 +130,17 @@ local globalAppBinds = {
 }
 
 -- Directional motions
-for key, dir in pairs(directions) do
-    table.insert(globalAppBinds, {
-        key = { key },
-        dispatch = hl.dsp.focus({ direction = dir }),
-    })
-
-    table.insert(globalAppBinds, {
-        key = { "SHIFT + " .. key },
-        dispatch = hl.dsp.window.move({ direction = dir }),
-    })
-end
+ for key, dir in pairs(directions) do
+--     table.insert(globalAppBinds, {
+--         key = { key },
+--         dispatch = hl.dsp.focus({ direction = dir }),
+--     })
+ 
+     table.insert(globalAppBinds, {
+         key = { "SHIFT + " .. key },
+         dispatch = hl.dsp.window.move({ direction = dir }),
+     })
+ end
 
 for i = 1, #keyboardString do
     local key = keyboardString:sub(i, i)
@@ -116,39 +151,80 @@ for i = 1, #keyboardString do
 end
 
 -- Resize motions
-for key, dir in pairs(directions) do
-    local delta = resizeDelta[dir]
-
-    table.insert(globalAppBinds, {
-        mod = subMod,
-        key = { "SHIFT + " .. key },
-        dispatch = hl.dsp.window.resize({
-            x = delta.x,
-            y = delta.y,
-            relative = true,
-        }),
-        opts = { repeating = true },
-    })
-end
+--for key, dir in pairs(directions) do
+--    local delta = resizeDelta[dir]
+--
+--    table.insert(globalAppBinds, {
+--        mod = subMod,
+--        key = { "SHIFT + " .. key }, dispatch = hl.dsp.window.resize({
+--            x = delta.x,
+--            y = delta.y,
+--            relative = true,
+--        }),
+--        opts = { repeating = true },
+--    })
+--end
 
 -- Cursor size
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 -- Trackpad gestures
-hl.gesture({ fingers = 3, direction = "swipe", action = "move" })
-hl.gesture({ fingers = 3, direction = "pinchin", action = "float" })
-hl.gesture({ fingers = 3, direction = "pinchout", action = "float" })
+hl.gesture({ fingers = 2, direction = "pinchout", mods = "SUPER", action = "resize" })
+hl.gesture({ fingers = 3, direction = "swipe", mods = "SUPER", action = "move" })
 hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
 
 hl.config({
+
     input = {
         kb_layout  = "us",
         kb_options = "caps:escape",
         follow_mouse = 1,
+        force_no_accel = false,
         sensitivity = 0.3, -- -1.0 - 1.0, 0 means no modification. 
-        touchpad = { natural_scroll = true } },
+        touchpad = { 
+            natural_scroll = true,  
+			disable_while_typing = true, 
+          },
+		tablet = {
+			output = "current", 
+		  },
+    },
+
+	cursor = {
+		inactive_timeout = 2, 
+        hide_on_key_press = true, 
+		warp_on_change_workspace = 1, 
+        warp_on_toggle_special = 1, 
+		persistent_warps = true, 
+    },
+
 })
+
+-- Panning gesture
+hl.gesture({
+    fingers = 3,
+    direction = "swipe",
+    action = {
+        update = function(info)
+            local dx = -math.floor(info.delta.x * 3)
+            local dy = -math.floor(info.delta.y * 3)
+            if dx == 0 and dy == 0 then return end
+            local ws = hl.get_active_workspace()
+            local clients = hl.get_workspace_windows(ws)
+            for _, w in ipairs(clients) do
+                if w.floating then
+                    hl.dispatch(hl.dsp.window.move({
+                        x = w.at.x + dx,
+                        y = w.at.y + dy,
+                        window = "address:" .. w.address,
+                    }))
+                end
+            end
+        end,
+    }
+})
+
 
 -- Keybind glue
 for _, bind in ipairs(globalAppBinds) do

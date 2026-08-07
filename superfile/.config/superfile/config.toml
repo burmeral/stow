@@ -53,7 +53,7 @@ ignore_missing_fields = false
 nerdfont = true
 # 
 # Set transparent background or not (this only work when your terminal background is transparent)
-transparent_background = false
+transparent_background = true
 # 
 # File preview width allow '0' (this mean same as file panel),'x' x must be less than 10 and greater than 1 (This means that the width of the file preview will be one xth of the total width.)
 file_preview_width = 0
@@ -84,4 +84,4 @@ metadata = false
 # Enable MD5 checksum generation for files
 enable_md5_checksum = false
 # Zoxide support for the fast navigation
-zoxide_support = false
+zoxide_support = true

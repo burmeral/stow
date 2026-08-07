@@ -1,24 +1,15 @@
 -- ~/.config/hypr/modules/events.lua
 
--------------------
----- AUTOSTART ----
--------------------
+-- Autostart
 
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
 hl.on("hyprland.start", function () 
-  hl.exec_cmd(terminal)
-  hl.exec_cmd("nm-applet")
-  hl.exec_cmd("wpaperd & quickshell")
+  hl.exec_cmd("awww-daemon & quickshell")
+  hl.exec_cmd("python3 ~/scripts/infinite_desktop_core.py 1.6 > /tmp/infinite-desktop.log 2>&1")
 end)
 
------------------------
------ PERMISSIONS -----
------------------------
-
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
--- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
--- for security reasons
 
 -- hl.config({
 --   ecosystem = {
