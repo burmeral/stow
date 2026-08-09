@@ -17,6 +17,9 @@ if Hostname == "koch" then
 
 elseif Hostname == "cross" then
 
+    otterSize  = { 410, 220 }
+    kittySize  = { 1247, 430 }
+
 else
 end
 

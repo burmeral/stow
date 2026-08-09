@@ -126,8 +126,15 @@ local globalAppBinds = {
 	{ mod = subMod, key = { "SHIFT + s" }, command = "grimblast copy area" },
 
     -- Exit
-    { key = {"DELETE"}, command = "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit" }
-}
+    { key = {"DELETE"}, dispatch = hl.dsp.exit() },
+
+  }
+
+  -- Reset SDDM session to gamescope on exit
+hl.on("hyprland.shutdown", function()
+    os.execute("printf '[Last]\\nSession=gamescope-wayland.desktop\\nUser=ram\\n' > /var/lib/sddm/.config/sddm/state.conf")
+end)
+
 
 -- Directional motions
  for key, dir in pairs(directions) do
@@ -251,5 +258,3 @@ for _, bind in ipairs(globalAppBinds) do
 
     hl.bind(fullKey, action, bind.opts or {})
 end
-
-

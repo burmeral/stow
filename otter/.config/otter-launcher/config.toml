@@ -141,11 +141,11 @@ description = "desktop programs"
 prefix = "a"
 cmd = """
 desktop_file() {
-find /usr/share/applications -name "*.desktop" 2>/dev/null
-find /usr/local/share/applications -name "*.desktop" 2>/dev/null
-find "$HOME/.local/share/applications" -name "*.desktop" 2>/dev/null
-find /var/lib/flatpak/exports/share/applications -name "*.desktop" 2>/dev/null
-find "$HOME/.local/share/flatpak/exports/share/applications" -name "*.desktop" 2>/dev/null
+    find /run/current-system/sw/share/applications -name "*.desktop" 2>/dev/null
+    find /etc/profiles/per-user/ram/share/applications -name "*.desktop" 2>/dev/null
+    find "$HOME/.local/share/applications" -name "*.desktop" 2>/dev/null
+    find /var/lib/flatpak/exports/share/applications -name "*.desktop" 2>/dev/null
+    find "$HOME/.local/share/flatpak/exports/share/applications" -name "*.desktop" 2>/dev/null
 }
 
 selected="$(

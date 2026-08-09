@@ -44,10 +44,17 @@ elseif Hostname == "koch" then
 elseif Hostname == "cross" then
 
     hl.monitor({
-		output = "",
-		mode = "preferred",
+		output = "eDP-1",
+		mode = "800x1280@90.00Hz",
 		position = "auto",
-        transform = 1,
+        transform = 3,
+		scale = 1,
+    })
+
+    hl.monitor({
+		output = "DP-1",
+		mode = "3440x1440@143.97Hz",
+		position = "auto",
 		scale = 1,
     })
 
