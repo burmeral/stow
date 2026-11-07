@@ -8,12 +8,12 @@
 -- Host-specific logic
 
 local otterSize  = { 410, 220 }
-local kittySize  = { 1384, 703 }
+local scratchSize  = { 1384, 703 }
 
 if Hostname == "koch" then
 
 	otterSize    = { 420, 220 }
-    kittySize    = { 1384, 703 }
+    scratchSize    = { 1384, 703 }
 
 elseif Hostname == "cross" then
 
@@ -27,19 +27,21 @@ end
 -- Universal window rules (shared among all hosts)
 
 hl.window_rule({ 
-    name         = "zen-border-rounding",
-    match        = { class = "zen-beta" }, 
-    rounding     = 20,
-})
-
-hl.window_rule({ 
     name         = "kitty-scratch",
     match        = { class = "kitty", class = "scratchpad" }, 
-	size         = kittySize, 
+	size         = scratchSize, 
     float        = true,
     center       = true,
     no_anim      = true,
     workspace    = "special:scratchpad",
+})
+
+hl.window_rule({ 
+    name         = "kitty-drop",
+    match        = { class = "kitty", title = "drop" }, 
+    float        = true,
+    size         = {742, 613}, 
+    move         = {"cursor_x-(window_w*0.5)", "cursor_y-(window_h*0.5)"},
 })
 
 hl.window_rule({
@@ -48,7 +50,7 @@ hl.window_rule({
 	float        = true,
     pin          = true,
     stay_focused = true,
-	-- animation    = "popin 80%",
+	animation    = "popin 80%",
     no_anim      = true,
 	size         = otterSize,
 	opaque       = true,
@@ -63,8 +65,26 @@ hl.window_rule({
 })
 
 hl.window_rule({ 
+    name         = "zen-border-rounding",
+    match        = { class = "zen-beta" }, 
+    rounding     = 20,
+})
+
+hl.window_rule({ 
+    name         = "firefox-border-rounding",
+    match        = { class = "firefox" }, 
+    rounding     = 20,
+})
+
+hl.window_rule({ 
     name         = "pip",
     match        = { class = "zen-beta", title = "Picture-in-Picture" }, 
+    float        = true,
+})
+
+hl.window_rule({ 
+    name         = "pip",
+    match        = { class = "firefox", title = "Picture-in-Picture" }, 
     float        = true,
 })
 
@@ -96,6 +116,12 @@ hl.window_rule({
     },
 
     no_focus = true,
+})
+
+hl.config({
+  xwayland = {
+    force_zero_scaling = true
+  }
 })
 
 -- Workspace rules + Overlays

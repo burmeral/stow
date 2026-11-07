@@ -74,6 +74,10 @@ target = "~/.config/nvim/lua/colors.lua"
 template = "bookokrat/bookokrat.yaml"
 target = "~/.config/bookokrat/generated-theme.yaml"
 
+[templates.zathura]
+template = "zathura/colors"
+target = "~/.config/zathura/colors"
+
 [hooks]
 
 # Run commands when wallust is invoked. Useful to avoid scripting.

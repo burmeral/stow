@@ -1,8 +1,16 @@
 -- ~/.config/hypr/modules/decor.lua
 
--- Decor
-
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
+
+-- Overrides
+
+-- hl.window_rule({
+--   match   = { class = "kitty" },
+--   opacity = "0.8 override 0.8 override 0.8 override",
+--   rounding     = 20,
+-- })
+
+-- Universal
 
 hl.config({
     general = {
@@ -28,7 +36,7 @@ hl.config({
     },
 
     decoration = {
-        rounding           = 0,
+        rounding           = 20,
         rounding_power     = 2,
 
         active_opacity     = 1.0,

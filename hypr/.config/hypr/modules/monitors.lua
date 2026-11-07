@@ -28,7 +28,7 @@ elseif Hostname == "koch" then
 		output = "eDP-1",
 		mode = "1920x1200@60.00000",
 		position = "0x0",
-		scale = 1.07,
+		scale = 1.0,
     }) 
 
     hl.monitor({
@@ -37,6 +37,14 @@ elseif Hostname == "koch" then
 		position = "0x-1200",
 		scale = 1,
     })
+
+    hl.monitor({
+		output = "DP-1",
+		mode = "1920x1080@60.00Hz",
+		position = "0x-1200",
+		scale = 1,
+    })
+
     
 	hl.workspace_rule({ workspace = "1", monitor = "eDP-1" })
 	hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1" })

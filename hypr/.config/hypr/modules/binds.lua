@@ -29,19 +29,20 @@ local globalAppBinds = {
     -- Open windows
     { key = { "RETURN" }, command = "kitty" },
     { key = { "b" }, command = "zen-beta" },
+    { key = { "a" }, command = "kitty --title drop" },
 
-    -- Otter
-	{
-		key = { "SPACE" },
-		dispatch = function()
-			if hl.get_windows({ class = "otter" })[1] ~= nil then
-                local close = hl.dsp.window.close()
-                hl.dispatch(close)
-			else
-				hl.exec_cmd("kitty --class otter --title otter-launcher -e sh -c 'sleep 0.05 && otter-launcher'")
-            end
-		end,
-	},
+	--    -- Otter
+	-- {
+	-- 	key = { "SPACE" },
+	-- 	dispatch = function()
+	-- 		if hl.get_windows({ class = "otter" })[1] ~= nil then
+	--                local close = hl.dsp.window.close()
+	--                hl.dispatch(close)
+	-- 		else
+	-- 			hl.exec_cmd("kitty --class otter --title otter-launcher -e sh -c 'sleep 0.05 && otter-launcher'")
+	--            end
+	-- 	end,
+	-- },
 
     -- Special workspaces
     
@@ -59,7 +60,6 @@ local globalAppBinds = {
 			end
 		end,
 	},
-
 
     -- Handle windows
     { key = { "i" }, dispatch = hl.dsp.window.fullscreen({ action = "toggle" }) },
@@ -172,14 +172,7 @@ end
 --    })
 --end
 
--- Cursor size
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-
--- Trackpad gestures
-hl.gesture({ fingers = 2, direction = "pinchout", mods = "SUPER", action = "resize" })
-hl.gesture({ fingers = 3, direction = "swipe", mods = "SUPER", action = "move" })
-hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
+-- Keyboard
 
 hl.config({
 
@@ -188,7 +181,7 @@ hl.config({
         kb_options = "caps:escape",
         follow_mouse = 1,
         force_no_accel = false,
-        sensitivity = 0.3, -- -1.0 - 1.0, 0 means no modification. 
+        sensitivity = 0.4, -- -1.0 - 1.0, 0 means no modification. 
         touchpad = { 
             natural_scroll = true,  
 			disable_while_typing = true, 
@@ -207,6 +200,18 @@ hl.config({
     },
 
 })
+
+-- Cursor conf
+hl.env("XCURSOR_SIZE", "28")
+hl.env("HYPRCURSOR_SIZE", "28")
+
+hl.env("XCURSOR_THEME", "macOS")
+hl.env("HYPRCURSOR_THEME", "macOS")
+
+-- Trackpad gestures
+hl.gesture({ fingers = 2, direction = "pinchout", mods = "SUPER", action = "resize" })
+hl.gesture({ fingers = 3, direction = "swipe", mods = "SUPER", action = "move" })
+hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
 
 -- Panning gesture
 hl.gesture({

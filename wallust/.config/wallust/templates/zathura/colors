@@ -1,0 +1,35 @@
+set default-bg                  "{{background}}"
+set default-fg                  "{{foreground}}"
+
+set statusbar-bg                "{{background | darken(0.05)}}"
+set statusbar-fg                "{{foreground}}"
+set inputbar-bg                 "{{background | darken(0.05)}}"
+set inputbar-fg                 "{{foreground}}"
+
+set notification-bg             "{{background}}"
+set notification-fg             "{{foreground}}"
+set notification-error-bg       "{{color1}}"
+set notification-error-fg       "{{background}}"
+set notification-warning-bg     "{{color3}}"
+set notification-warning-fg     "{{background}}"
+
+set completion-bg               "{{background}}"
+set completion-fg               "{{foreground}}"
+set completion-group-bg         "{{background | darken(0.05)}}"
+set completion-group-fg         "{{color8}}"
+set completion-highlight-bg     "{{color4}}"
+set completion-highlight-fg     "{{background}}"
+
+set index-bg                    "{{background}}"
+set index-fg                    "{{foreground}}"
+set index-active-bg             "{{color4}}"
+set index-active-fg             "{{background}}"
+
+set highlight-color             "{{color3}}"
+set highlight-active-color      "{{color4}}"
+set render-loading-bg           "{{background}}"
+set render-loading-fg           "{{foreground}}"
+
+# Recolor pages (toggle with Ctrl+R)
+set recolor-lightcolor          "{{background}}"
+set recolor-darkcolor           "{{foreground}}"

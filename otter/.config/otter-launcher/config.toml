@@ -141,11 +141,20 @@ description = "desktop programs"
 prefix = "a"
 cmd = """
 desktop_file() {
-    find /run/current-system/sw/share/applications -name "*.desktop" 2>/dev/null
-    find /etc/profiles/per-user/ram/share/applications -name "*.desktop" 2>/dev/null
-    find "$HOME/.local/share/applications" -name "*.desktop" 2>/dev/null
-    find /var/lib/flatpak/exports/share/applications -name "*.desktop" 2>/dev/null
-    find "$HOME/.local/share/flatpak/exports/share/applications" -name "*.desktop" 2>/dev/null
+find /usr/share/applications -name "*.desktop" 2>/dev/null
+find /usr/local/share/applications -name "*.desktop" 2>/dev/null
+find "$HOME/.local/share/applications" -name "*.desktop" 2>/dev/null
+find /var/lib/flatpak/exports/share/applications -name "*.desktop" 2>/dev/null
+find "$HOME/.local/share/flatpak/exports/share/applications" -name "*.desktop" 2>/dev/null
+
+    local firefox
+    firefox="$(readlink -f "$(command -v firefox)")"
+
+    if [[ "$firefox" == /nix/store/* ]]; then
+        local firefox_root
+        firefox_root="${firefox%/bin/firefox}"
+        find "$firefox_root/share/applications" -name "*.desktop" 2>/dev/null
+    fi
 }
 
 selected="$(

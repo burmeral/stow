@@ -1,0 +1,86 @@
+/* Hide Firefox window controls */
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+/* Hide the native navigation/address bar */
+/* #nav-bar { */
+/*   visibility: collapse !important; */
+/* } */
+
+/* Vertical tabs */
+#tabbrowser-tabs[orient="vertical"] {
+  counter-reset: tab-number;
+}
+
+/* Individual tabs */
+#tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:not([hidden]) {
+  counter-increment: tab-number;
+
+  min-height: 28px !important;
+  margin: 2px 6px !important;
+}
+
+/* Remove Firefox's internal tab-content spacing */
+#tabbrowser-tabs[orient="vertical"] .tab-content {
+  padding-inline: 0 !important;
+  margin-inline: 0 !important;
+}
+
+/* Hide favicon */
+#tabbrowser-tabs[orient="vertical"] .tab-icon-stack {
+  display: none !important;
+}
+
+/* Hide title */
+#tabbrowser-tabs[orient="vertical"] .tab-label-container {
+  display: none !important;
+}
+
+/* Center tab number */
+#tabbrowser-tabs[orient="vertical"] .tab-content::before {
+  content: counter(tab-number);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+/* Rounded tab background */
+#tabbrowser-tabs[orient="vertical"] .tab-background {
+  border-radius: 10px !important;
+}
+
+/* Active tab */
+#tabbrowser-tabs[orient="vertical"]
+  .tabbrowser-tab[selected]
+  .tab-background {
+  border-radius: 10px !important;
+}
+
+/* Remove tab/sidebar shadows */
+#tabbrowser-tabs::after,
+#vertical-pinned-tabs-container::after {
+  display: none !important;
+}
+
+#sidebar-main,
+#tabbrowser-tabs {
+  box-shadow: none !important;
+}
+
+/* Remove Tracking Protection icon */
+#tracking-protection-icon-container,
+#tracking-protection-icon {
+  display: none !important;
+}

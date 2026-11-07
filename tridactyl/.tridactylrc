@@ -1,0 +1,62 @@
+" General Settings
+set configversion 2.0
+set update.lastchecktime 1789020392323
+set smoothscroll true
+set newtab moz-extension://862489ff-35b4-43e6-be14-fc3e41653ee7/index.html
+set hintstyles.fg none
+set hintstyles.bg none
+set hintstyles.outline none
+set hintstyles.overlay none
+set hintstyles.overlayoutline none
+
+
+set customthemes.ium span.TridactylHint { font-family: monospace !important; background: linear-gradient(0, rgb(255, 197, 66) 0, rgb(255,247,133) 100%) !important; color: black !important; text-shadow: cyan -1px -1px 0px, cyan -1px 0px 0px, cyan -1px 1px 0px, cyan 1px -1px 0px, cyan 1px 0px 0px, cyan 1px 1px 0px, cyan 0px 1px 0px, cyan 0px -1px 0px !important; }
+set customthemes.blue span.TridactylHint { font-family: monospace !important; background: linear-gradient(90deg,rgba(232, 251, 255, 1) 50%, rgba(207, 249, 255, 1) 100%) !important; color: black !important; text-shadow: cyan -1px -1px 0px, cyan -1px 0px 0px, cyan -1px 1px 0px, cyan 1px -1px 0px, cyan 1px 0px 0px, cyan 1px 1px 0px, cyan 0px 1px 0px, cyan 0px -1px 0px !important; }
+set customthemes.trans span.TridactylHint { font-family: monospace !important; background: linear-gradient(0deg,rgba(206, 241, 253, 1) 10%, rgba(255, 214, 236, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(255, 214, 236, 1) 75%, rgba(206, 241, 253, 1) 90%) !important; color: black !important; text-shadow: cyan -1px -1px 0px, cyan -1px 0px 0px, cyan -1px 1px 0px, cyan 1px -1px 0px, cyan 1px 0px 0px, cyan 1px 1px 0px, cyan 0px 1px 0px, cyan 0px -1px 0px !important; }
+set customthemes.transr span.TridactylHint { font-family: monospace !important; background: linear-gradient(0deg,rgba(255, 214, 236, 1) 10%, rgba(206, 241, 253, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(206, 241, 253, 1) 75%, rgba(255, 214, 236, 1) 90%) !important; color: black !important; text-shadow: cyan -1px -1px 0px, cyan -1px 0px 0px, cyan -1px 1px 0px, cyan 1px -1px 0px, cyan 1px 0px 0px, cyan 1px 1px 0px, cyan 0px 1px 0px, cyan 0px -1px 0px !important; }
+
+set theme transr
+
+" Binds
+unbind h
+unbind j
+unbind k
+unbind l
+unbind <C-u>
+unbind <C-d>
+bind <D-j> scrollstart 0 100
+bind <D-k> scrollstart 0 -100
+bind <D-h> scrollstart -100 0
+bind <D-l> scrollstart 100 0
+bind <CD-d> scrollstart 0 500
+bind <CD-u> scrollstart 0 -500
+bind <U-j> scrollstop
+bind <U-k> scrollstop
+bind <U-h> scrollstop
+bind <U-l> scrollstop
+bind <U-J> scrollstop
+bind <U-K> scrollstop
+bind <U-H> scrollstop
+bind <U-L> scrollstop
+bind <CU-u> scrollstop
+bind <CU-d> scrollstop
+bind <CU-U> scrollstop
+bind <CU-D> scrollstop
+bind J tabnext
+bind K tabprev
+unbind <Space>
+unbind f
+bind b current_url bmark
+bind a hint
+bind B bmark
+bind n fillcmdline taball
+bind A hint -b
+bind e escapehatch
+bind gnK tabopen https://gemini.google.com/app/57b6258557d26c4e?android-min-version=301356232&ios-min-version=322.0&is_sa=1&campaign_id=gemini_overview_page&pt=9008&mt=8&ct=gemini_overview_page&hl=en-US&icid=microsite_gemini_about_page
+bind goK open https://gemini.google.com/app/57b6258557d26c4e?android-min-version=301356232&ios-min-version=322.0&is_sa=1&campaign_id=gemini_overview_page&pt=9008&mt=8&ct=gemini_overview_page&hl=en-US&icid=microsite_gemini_about_page
+bind gwK winopen https://gemini.google.com/app/57b6258557d26c4e?android-min-version=301356232&ios-min-version=322.0&is_sa=1&campaign_id=gemini_overview_page&pt=9008&mt=8&ct=gemini_overview_page&hl=en-US&icid=microsite_gemini_about_page
+bind gpK winopen -private https://gemini.google.com/app/57b6258557d26c4e?android-min-version=301356232&ios-min-version=322.0&is_sa=1&campaign_id=gemini_overview_page&pt=9008&mt=8&ct=gemini_overview_page&hl=en-US&icid=microsite_gemini_about_page
+bind <C-S-c> clipboard yank
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
