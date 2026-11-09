@@ -1,12 +1,12 @@
 local colors = {
-    bg = "#F4F2ED",
-    fg = "#060504",
-    red = "#F2F278",
-    green = "#8D9D4C",
-    yellow = "#4A50C0",
-    blue = "#5C6731",
-    magenta = "#31378C",
-    cyan = "#19140B",
+    bg = "#2E3440",
+    fg = "#D8DEE9",
+    red = "#BF616A",
+    green = "#A3BE8C",
+    yellow = "#EBCB8B",
+    blue = "#81A1C1",
+    magenta = "#B48EAD",
+    cyan = "#88C0D0",
 }
 
 vim.api.nvim_set_hl(0, "Normal", {
