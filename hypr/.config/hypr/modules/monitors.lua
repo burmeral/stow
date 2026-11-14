@@ -24,6 +24,9 @@ if Hostname == "sier" then
 
 elseif Hostname == "koch" then
 
+    -- Screen shader flicker fix
+    hl.config({ debug = { damage_tracking = 0 } })
+
     hl.monitor({
 		output = "eDP-1",
 		mode = "1920x1200@60.00000",
@@ -45,7 +48,6 @@ elseif Hostname == "koch" then
 		scale = 1,
     })
 
-    
 	hl.workspace_rule({ workspace = "1", monitor = "eDP-1" })
 	hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1" })
 

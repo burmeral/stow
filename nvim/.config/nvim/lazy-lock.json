@@ -1,8 +1,8 @@
 {
   "comfy-line-numbers.nvim": { "branch": "main", "commit": "f139c94ceaa37c7c60cf4d1a63a8a8af1e7a78e7" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
-  "nvim-treesitter": { "branch": "main", "commit": "c9f9ed6c1892f629ea399f4ee7905f2686fa13f2" },
-  "orgmode": { "branch": "master", "commit": "f32a06d4b5399dad8bf0478c772bf6c513f02dcf" },
+  "nvim-treesitter": { "branch": "main", "commit": "19bdfc04f40ed2ccb3340591d125f759b0406875" },
+  "orgmode": { "branch": "master", "commit": "08c3ea6ca3745d49435378cddfa93d06e0b39574" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
   "vim-suda": { "branch": "master", "commit": "c492741b4679b3cdd4d9e34138209784e061d916" }
 }

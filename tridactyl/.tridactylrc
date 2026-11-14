@@ -15,7 +15,7 @@ set customthemes.blue span.TridactylHint { font-family: monospace !important; ba
 set customthemes.trans span.TridactylHint { font-family: monospace !important; background: linear-gradient(0deg,rgba(206, 241, 253, 1) 10%, rgba(255, 214, 236, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(255, 214, 236, 1) 75%, rgba(206, 241, 253, 1) 90%) !important; color: black !important; text-shadow: cyan -1px -1px 0px, cyan -1px 0px 0px, cyan -1px 1px 0px, cyan 1px -1px 0px, cyan 1px 0px 0px, cyan 1px 1px 0px, cyan 0px 1px 0px, cyan 0px -1px 0px !important; }
 set customthemes.transr span.TridactylHint { font-family: monospace !important; background: linear-gradient(0deg,rgba(255, 214, 236, 1) 10%, rgba(206, 241, 253, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(206, 241, 253, 1) 75%, rgba(255, 214, 236, 1) 90%) !important; color: black !important; text-shadow: cyan -1px -1px 0px, cyan -1px 0px 0px, cyan -1px 1px 0px, cyan 1px -1px 0px, cyan 1px 0px 0px, cyan 1px 1px 0px, cyan 0px 1px 0px, cyan 0px -1px 0px !important; }
 
-set theme transr
+set theme ium
 
 " Binds
 unbind h

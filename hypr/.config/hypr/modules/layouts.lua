@@ -11,5 +11,12 @@ hl.config({ dwindle = { preserve_split = true } })
 hl.config({ master = { new_status = "master" } })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
-hl.config({ scrolling = { fullscreen_on_one_column = true} })
+hl.config({ 
+  scrolling = { 
+    fullscreen_on_one_column = true;
+    follow_min_visible = 1;
+    direction = right;
+    focus_fit_method = 1; -- 0 = center, 1 = fit
+    wrap_focus = true;
+  } })
 
